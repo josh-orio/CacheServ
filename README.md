@@ -5,13 +5,13 @@ A socket level server, with file caching, written in Python.
 
 The intention was to build a simple socket communication system with caching, for accelerated transferring files.
 
-When testing machine learning programs, they are prone to crashing. When you reload the program, you of course have to reload the dataset.With large datasets, it means you wait often >10 seconds before you even get going. 
+When testing machine learning programs, they are prone to crashing. When you reload the program, you of course have to reload the dataset. With large datasets, it means you wait often >10 seconds before you even get going. 
 
 This is long enough to lose focus and go back to thumbing through TikTok.
 
-Having a seperate process which doesn't crash so much and keeps the most recently used files in RAM, you can avoid having to hit a much slower disk. This method does of course tradeoff maximum dataset capacity for start-up speed gains.
+Having a seperate process which doesn't crash so much and keeps the most recently used files in RAM, you can avoid having to hit a much slower disk. This method does tradeoff maximum dataset capacity for start-up speed gains.
 
-This was developed with a home network in mind, so the idea of hot storing a dataset on another local machine is not really feasible. The program was at one point tested to run on two machines but page sizes have to be small and data transfer takes too long.
+This was developed with a home network in mind, so the idea of hot storing a dataset on another local machine is not really feasible, because the network is too slow. The program was at one point tested to run on two machines but page sizes have to be small and data transfer takes too long.
 
 ## The Implementation
 
